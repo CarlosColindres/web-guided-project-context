@@ -7,7 +7,9 @@ const App = ()=> {
     const [person, setPerson] = useState(data);
     return(<div className="component">
         <h1>APP COMPONENT</h1>
-        <SubComponent1 person={person} setPerson={setPerson}/>
+        <PersonContext.Provider>
+            <SubComponent1 person={person} setPerson={setPerson}/>
+        </PersonContext.Provider>
     </div>);
 };
 
