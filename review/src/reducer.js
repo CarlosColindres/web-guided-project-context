@@ -5,6 +5,7 @@ export const setName = (title, first, last) => {
     return({type:SET_NAME, payload:{title, first, last}});
 }
 
+// returns for setName("Mr", "Warren", "Longmire")
 // {
 //     type: "SET_NAME",
 //     payload: {
