@@ -46,9 +46,9 @@ const SubComponent3 = (props) => {
         setPerson({
             ...person,
             name: {
-                street: "222 N 22 Street",
-                city: "Philadelphia",
-                state: "PA"
+                title: "Mr",
+                first: "Warren",
+                last: "Longmire"
             }
         });
     }
