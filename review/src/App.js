@@ -3,8 +3,10 @@ import data from './data';
 
 const App = ()=> {
     const [person, setPerson] = useState(data);
-    console.log(person);
-    return(<h1>Hello World</h1>);
+    return(<div>
+        <h1>APP COMPONENT</h1>
+        <SubComponent1 person={person} setPerson={setPerson}/>
+    </div>);
 };
 
 export default App;
