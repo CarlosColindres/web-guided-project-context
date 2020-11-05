@@ -2,8 +2,18 @@ const SET_NAME = "SET_NAME";
 const SET_LOCATION = "SET_LOCATION";
 
 export const setName = (title, first, last) => {
-    return({type:SET_NAME, payload:{title:title, first:first, last:list}});
+    return({type:SET_NAME, payload:{title, first, last}});
 }
+
+// {
+//     type: "SET_NAME",
+//     payload: {
+//         title:"Mr",
+//         first:"Warren",
+//         last: "Longmire"
+//     }
+// }
+
 
 export const setLocation = (street, city, state) => {
     return({type:SET_LOCATION, payload:{street, city, state}});
