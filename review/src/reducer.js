@@ -23,7 +23,7 @@ export const setLocation = (street, city, state) => {
 export const reducer = (state, action) => {
     switch(action.type) {
         case(SET_NAME):
-            return({...state, name:action.payload});
+            return({...state, name:{title:action.payload.title, first:action.payload.first, last:action.payload.last}});
         case(SET_LOCATION):
             return({...state, location:action.payload});
         default:
