@@ -31,6 +31,28 @@ const SubComponent2 = (props) => {
 const SubComponent3 = (props) => {
     const {person, setPerson} = props;
 
+    const handleLocation = ()=> {
+        setPerson({
+            ...person,
+            location: {
+                street: "222 N 22 Street",
+                city: "Philadelphia",
+                state: "PA"
+            }
+        });
+    }
+
+    const handleName = ()=> {
+        setPerson({
+            ...person,
+            name: {
+                street: "222 N 22 Street",
+                city: "Philadelphia",
+                state: "PA"
+            }
+        });
+    }
+
     return(<div className="component">
         <h2>SUBCOMPONENT 3</h2>
         <p>location: {person.location.street} {person.location.city} {person.name.state}</p>
