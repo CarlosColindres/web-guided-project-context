@@ -14,7 +14,6 @@ const App = ()=> {
         {/* <PersonContext.Provider value={[person, setPerson]}> */}
         <PersonContext.Provider value={[person, setName, setLocation, dispatch]}>
             <SubComponent1/>
-            <SubComponent2/>
         </PersonContext.Provider>
     </div>);
 };
@@ -22,7 +21,7 @@ const App = ()=> {
 const SubComponent1 = () => {
     return(<div className="component">
         <h2>SUBCOMPONENT 1</h2>
-        
+        <SubComponent2/>
     </div>);
 }
 
