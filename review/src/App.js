@@ -9,4 +9,10 @@ const App = ()=> {
     </div>);
 };
 
+const SubComponent1 = (props) => {
+    return(<div>
+        <SubComponent2 person={person} setPerson={setPerson}/>
+    </div>)
+}
+
 export default App;
