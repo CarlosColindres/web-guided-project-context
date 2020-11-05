@@ -14,12 +14,10 @@ const App = ()=> {
     </div>);
 };
 
-const SubComponent1 = (props) => {
-    const { person, setPerson } = props;
-
+const SubComponent1 = () => {
     return(<div className="component">
         <h2>SUBCOMPONENT 1</h2>
-        <SubComponent2 person={person} setPerson={setPerson}/>
+        <SubComponent2/>
     </div>);
 }
 
