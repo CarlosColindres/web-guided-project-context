@@ -12,21 +12,23 @@ export default function App() {
   const [activeFamily, setActiveFamily] = useState(families[0]);
 
   return (
-    <div className="App">
-      <section className="header">
-        <h1>Family Trees</h1>
-        {families.map(d => (
-          <button
-            className={`family-button ${d.familyName ===
-              activeFamily.familyName && "active"}`}
-            key={d.familyName}
-            onClick={() => setActiveFamily(d)}
-          >
-            {d.familyName}
-          </button>
-        ))}
-      </section>
-      {activeFamily && <FamilyTree family={activeFamily} />}
-    </div>
+    <FamilyContext.Provider>
+      <div className="App">
+        <section className="header">
+          <h1>Family Trees</h1>
+          {families.map(d => (
+            <button
+              className={`family-button ${d.familyName ===
+                activeFamily.familyName && "active"}`}
+              key={d.familyName}
+              onClick={() => setActiveFamily(d)}
+            >
+              {d.familyName}
+            </button>
+          ))}
+        </section>
+        {activeFamily && <FamilyTree family={activeFamily} />}
+      </div>
+    </FamilyContext.Provider>
   );
 }
