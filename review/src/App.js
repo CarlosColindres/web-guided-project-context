@@ -26,11 +26,13 @@ const SubComponent1 = () => {
 }
 
 const SubComponent2 = () => {
-    const [person] = useContext(PersonContext);
+    // const [person] = useContext(PersonContext);
 
     return(<div className="component">
-        <h2>SUBCOMPONENT 2</h2>
-        <p>Name: {person.name.title} {person.name.first} {person.name.last}</p>
+        <PersonContext.Consumer>
+            <h2>SUBCOMPONENT 2</h2>
+            <p>Name: {person.name.title} {person.name.first} {person.name.last}</p>
+        </PersonContext.Consumer>
         <SubComponent3/>
     </div>);
 }
