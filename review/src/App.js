@@ -9,7 +9,7 @@ const App = ()=> {
     return(<div className="component">
         <h1>APP COMPONENT</h1>
         <PersonContext.Provider value={[person, setPerson]}>
-            <SubComponent1 person={person} setPerson={setPerson}/>
+            <SubComponent1/>
         </PersonContext.Provider>
     </div>);
 };
