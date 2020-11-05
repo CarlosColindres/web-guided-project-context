@@ -39,7 +39,6 @@ const SubComponent2 = () => {
                     </div>)
                 }
             }
-            
         </PersonContext.Consumer>
         <SubComponent3/>
     </div>);
