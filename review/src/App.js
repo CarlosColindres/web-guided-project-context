@@ -21,8 +21,8 @@ const SubComponent1 = () => {
     </div>);
 }
 
-const SubComponent2 = (props) => {
-    const {person, setPerson} = props;
+const SubComponent2 = () => {
+    const [person] = useContext(PersonContext);
 
     return(<div className="component">
         <h2>SUBCOMPONENT 2</h2>
@@ -31,8 +31,8 @@ const SubComponent2 = (props) => {
     </div>);
 }
 
-const SubComponent3 = (props) => {
-    const {person, setPerson} = props;
+const SubComponent3 = () => {
+    const [person, setPerson] = useContext(PersonContext);
 
     const handleLocation = ()=> {
         setPerson({
