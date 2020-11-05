@@ -10,7 +10,7 @@ const App = ()=> {
 };
 
 const SubComponent1 = (props) => {
-    return(<div>
+    return(<div className="component">
         <h2>SUBCOMPONENT 1</h2>
         {/* <SubComponent2 person={person} setPerson={setPerson}/> */}
     </div>);
