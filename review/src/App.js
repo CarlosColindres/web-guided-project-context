@@ -12,7 +12,7 @@ const App = ()=> {
     return(<div className="component">
         <h1>APP COMPONENT</h1>
         {/* <PersonContext.Provider value={[person, setPerson]}> */}
-        <PersonContext.Provider value={[person, setName, setLocation, dispatch]}>
+        <PersonContext.Provider value={[person, setName, setLocation, dispatch, "walliyBurger"]}>
             <SubComponent1/>
         </PersonContext.Provider>
     </div>);
@@ -36,13 +36,29 @@ const SubComponent2 = () => {
 }
 
 const SubComponent3 = () => {
-    const [person, setName, setLocation, dispatch] = useContext(PersonContext);
+    const [person, setName, setLocation, dispatch, wierdStuff] = useContext(PersonContext);
 
     const handleLocation = ()=> {
+        // setPerson({
+        //     ...person,
+        //     location: {
+        //         street: "222 N 22 Street",
+        //         city: "Philadelphia",
+        //         state: "PA"
+        //     }
+        // });
         dispatch(setLocation("222 N 22nd Street", "Philly", "PA"));
     }
 
     const handleName = ()=> {
+        // setPerson({
+        //     ...person,
+        //     name: {
+        //         title: "Mr",
+        //         first: "Warren",
+        //         last: "Longmire"
+        //     }
+        // });
         dispatch(setName("Mr", "Warren", "Longmire"));
     }
 
