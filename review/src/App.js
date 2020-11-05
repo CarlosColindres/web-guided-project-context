@@ -36,7 +36,7 @@ const SubComponent2 = () => {
 }
 
 const SubComponent3 = () => {
-    const [person, setName, setLocation, dispatch, wierdStuff] = useContext(PersonContext);
+    const [person, setName, setLocation, dispatch] = useContext(PersonContext);
 
     const handleLocation = ()=> {
         // setPerson({
