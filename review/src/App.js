@@ -47,18 +47,19 @@ const SubComponent3 = () => {
         //         state: "PA"
         //     }
         // });
-        dispatch(setLocation(""))
+        dispatch(setLocation("222 N 22nd Street", "Philly", "PA"));
     }
 
     const handleName = ()=> {
-        setPerson({
-            ...person,
-            name: {
-                title: "Mr",
-                first: "Warren",
-                last: "Longmire"
-            }
-        });
+        // setPerson({
+        //     ...person,
+        //     name: {
+        //         title: "Mr",
+        //         first: "Warren",
+        //         last: "Longmire"
+        //     }
+        // });
+        dispatch(setName("Mr", "Warren", "Longmire"));
     }
 
     return(<div className="component">
