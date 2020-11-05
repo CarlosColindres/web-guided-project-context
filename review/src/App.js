@@ -34,7 +34,8 @@ const SubComponent3 = (props) => {
     return(<div className="component">
         <h2>SUBCOMPONENT 3</h2>
         <p>location: {person.location.street} {person.location.city} {person.name.state}</p>
-        
+        <button onClick={handleLocation} >Change Location</button>
+        <button onClick={handleName}>Change Name</button>
     </div>);
 }
 export default App;
