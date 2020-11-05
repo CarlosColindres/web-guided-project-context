@@ -30,8 +30,17 @@ const SubComponent2 = () => {
 
     return(<div className="component">
         <PersonContext.Consumer>
-            <h2>SUBCOMPONENT 2</h2>
-            <p>Name: {person.name.title} {person.name.first} {person.name.last}</p>
+            {   
+                person => {
+                    console.log(person);
+                    
+                    return(<div>
+                        <h2>SUBCOMPONENT 2</h2>
+                        <p>Name: {person.name.title} {person.name.first} {person.name.last}</p>
+                    </div>)
+                }
+            }
+            
         </PersonContext.Consumer>
         <SubComponent3/>
     </div>);
