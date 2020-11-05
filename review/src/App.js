@@ -1,6 +1,8 @@
 import React, { useState, useContext, createContext } from 'react';
 import data from './data';
 
+const PersonContext = createContext();
+
 const App = ()=> {
     const [person, setPerson] = useState(data);
     return(<div className="component">
