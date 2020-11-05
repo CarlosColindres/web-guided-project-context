@@ -27,7 +27,7 @@ const SubComponent2 = () => {
     return(<div className="component">
         <h2>SUBCOMPONENT 2</h2>
         <p>Name: {person.name.title} {person.name.first} {person.name.last}</p>
-        <SubComponent3 person={person} setPerson={setPerson}/>
+        <SubComponent3/>
     </div>);
 }
 
