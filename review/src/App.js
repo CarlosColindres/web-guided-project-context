@@ -31,9 +31,8 @@ const SubComponent2 = () => {
     return(<div className="component">
         <PersonContext.Consumer>
             {   
-                person => {
-                    console.log(person);
-                    
+                data => {
+                    const [person] = data;
                     return(<div>
                         <h2>SUBCOMPONENT 2</h2>
                         <p>Name: {person.name.title} {person.name.first} {person.name.last}</p>
