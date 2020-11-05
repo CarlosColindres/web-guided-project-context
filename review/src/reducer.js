@@ -1,6 +1,12 @@
+const SET_NAME = "SET_NAME";
+const SET_LOCATION = "SET_LOCATION";
 
 export const setName = (title, first, last) {
     return({type:SET_NAME, payload:{title, first, last}});
+}
+
+export const setLocation = (street, city, state) => {
+    return({type:SET_LOCATION, payload:{street, city, state}});
 }
 
 export const reducer = (state, action) => {
