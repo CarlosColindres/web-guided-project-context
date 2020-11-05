@@ -6,7 +6,8 @@ import data from './data';
 const PersonContext = createContext();
 
 const App = ()=> {
-    const [person, setPerson] = useState(data);
+    // const [person, setPerson] = useState(data);
+    const [person, dispatch] = useReducer(reducer, data);
 
     return(<div className="component">
         <h1>APP COMPONENT</h1>
