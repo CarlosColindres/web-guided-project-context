@@ -36,17 +36,18 @@ const SubComponent2 = () => {
 }
 
 const SubComponent3 = () => {
-    const [person, setPerson] = useContext(PersonContext);
+    const [person, setName, setLocation, dispatch] = useContext(PersonContext);
 
     const handleLocation = ()=> {
-        setPerson({
-            ...person,
-            location: {
-                street: "222 N 22 Street",
-                city: "Philadelphia",
-                state: "PA"
-            }
-        });
+        // setPerson({
+        //     ...person,
+        //     location: {
+        //         street: "222 N 22 Street",
+        //         city: "Philadelphia",
+        //         state: "PA"
+        //     }
+        // });
+        dispatch(setLocation(""))
     }
 
     const handleName = ()=> {
