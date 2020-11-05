@@ -11,7 +11,8 @@ const App = ()=> {
 
     return(<div className="component">
         <h1>APP COMPONENT</h1>
-        <PersonContext.Provider value={[person, setPerson]}>
+        {/* <PersonContext.Provider value={[person, setPerson]}> */}
+        <PersonContext.Provider value={[person, setName, setLocation, dispatch]}>
             <SubComponent1/>
         </PersonContext.Provider>
     </div>);
