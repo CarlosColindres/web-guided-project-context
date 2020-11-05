@@ -1,4 +1,4 @@
-import React, { useState, useContext, createContext } from 'react';
+import React, { useState, useReducer, useContext, createContext } from 'react';
 import data from './data';
 
 const PersonContext = createContext();
